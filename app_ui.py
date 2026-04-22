@@ -12,7 +12,7 @@ import gdown
 
 FILE_ID = "1qPIAsAtj8xPqN60c8IJOTjEqO_EVBaQF"
 URL = f"https://drive.google.com/uc?id=1qPIAsAtj8xPqN60c8IJOTjEqO_EVBaQF"
-OUTPUT = "data.csv"
+OUTPUT = "weatherHistory_enhanced.csv"
 
 @st.cache_data
 def load_data():
