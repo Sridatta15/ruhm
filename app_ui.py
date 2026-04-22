@@ -7,6 +7,7 @@ warnings.filterwarnings("ignore")
 
 url = "https://drive.google.com/file/d/1qPIAsAtj8xPqN60c8IJOTjEqO_EVBaQF/view?usp=drivesdk"
 df = pd.read_csv(url)
+st.write(df.head())
 st.set_page_config(
     page_title="Smart Sericulture System",
     page_icon="🐛",
