@@ -1,5 +1,4 @@
 import streamlit as st
-import gdown
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -8,11 +7,7 @@ warnings.filterwarnings("ignore")
 
 
 
-url = "https://drive.google.com/uc?id=1AbCXYZ12345"
-gdown.download(url, "data.csv", quiet=False)
 
-df = pd.read_csv("data.csv")
-st.write(df.head())
 st.set_page_config(
     page_title="Smart Sericulture System",
     page_icon="🐛",
