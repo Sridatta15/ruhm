@@ -2,10 +2,28 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import gdown
 import time, os, warnings
 warnings.filterwarnings("ignore")
 
 
+import gdown
+
+
+FILE_ID = "1qPIAsAtj8xPqN60c8IJOTjEqO_EVBaQF"
+URL = f"https://drive.google.com/uc?id={1qPIAsAtj8xPqN60c8IJOTjEqO_EVBaQF}"
+OUTPUT = "data.csv"
+
+@st.cache_data
+def load_data():
+    if not os.path.exists(OUTPUT):
+        gdown.download(URL, OUTPUT, quiet=False)
+    return pd.read_csv(OUTPUT)
+
+df = load_data()
+
+st.title("CSV Data")
+st.write(df.head())
 
 
 st.set_page_config(
